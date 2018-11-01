@@ -29,3 +29,21 @@ def my_min2(arr)
   end 
   min 
 end 
+
+
+
+list = [5, 3, -7]
+
+def lcs1(list)
+  subs = []
+  list.each_index do |i|
+    (i...list.length).each do |j|
+      subs << list[i..j] 
+    end 
+  end 
+  subs.map { |el| el.reduce(:+) }.max
+end 
+
+
+
+
