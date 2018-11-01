@@ -46,4 +46,14 @@ end
 
 
 
-
+def lcs2(list)
+  sum = 0
+  max_sum = list[0]
+  
+  list.each do |el|
+    sum += el 
+    max_sum = sum if sum > max_sum
+    sum = 0 if sum < 0
+  end
+  max_sum
+end   
